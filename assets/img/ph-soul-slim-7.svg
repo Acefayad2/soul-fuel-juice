@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8C6D2F"/><stop offset="1" stop-color="#C6A15B"/>
+  </linearGradient></defs>
+  <rect width="800" height="680" fill="url(#g)"/>
+  <g transform="translate(320,240) scale(1.6)" opacity="0.92">
+    <path d="M50 89 C29 73 8 58 8 37 C8 24.5 17.5 15 30 15 C38.8 15 46 20 50 27.5 C54 20 61.2 15 70 15 C82.5 15 92 24.5 92 37 C92 58 71 73 50 89 Z" fill="#FAF6ED"/>
+    <path d="M50 74 C37 64 24 55 24 41.5 C24 33.5 30 27.5 37.5 27.5 C43 27.5 47.5 30.7 50 35.4 C52.5 30.7 57 27.5 62.5 27.5 C70 27.5 76 33.5 76 41.5 C76 55 63 64 50 74 Z" fill="none" stroke="#8C6D2F" stroke-width="4"/>
+    <path d="M50 74 C50 58 54 40 68 30" fill="none" stroke="#8C6D2F" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <text x="400" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="30" letter-spacing="6" fill="#FAF6ED" opacity="0.85">7-DAY TRANSFORMATION</text>
+</svg>
