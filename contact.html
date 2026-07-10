@@ -46,7 +46,7 @@
     <div class="split" style="align-items:start">
       <div class="form-card reveal">
         <h2 style="font-size:1.5rem">Send a Message</h2>
-        <form name="contact" method="POST" action="/contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="contact" method="POST" action="/.netlify/functions/contact-to-sheets" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact">
           <p class="visually-hidden"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
           <div class="form-grid">
