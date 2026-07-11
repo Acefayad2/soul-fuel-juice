@@ -21,7 +21,7 @@ const PRODUCTS = [
   },
   {
     id: "golden-glow", type: "juice", name: "Golden Glow",
-    img: "/assets/img/ph-golden-glow.svg",
+    img: "/assets/img/golden-glow.jpg",
     ingredients: "Mango, Pineapple, Carrot, Lemon, Ginger",
     benefits: ["Vitamins A & C", "Energy", "Skin & Eye Health", "Digestive Health"],
     sizes: JUICE_SIZES,
@@ -35,7 +35,7 @@ const PRODUCTS = [
   },
   {
     id: "queens-power", type: "juice", name: "Queen's Power",
-    img: "/assets/img/ph-queens-power.svg",
+    img: "/assets/img/queens-power.jpg",
     ingredients: "Beetroot, Watermelon, Ginger, Pineapple, Lemon, Maca Root Powder",
     benefits: ["Hormonal Balance", "Stamina", "Iron & Blood Health", "Skin Glow"],
     sizes: JUICE_SIZES,
@@ -49,7 +49,7 @@ const PRODUCTS = [
   },
   {
     id: "island-glow", type: "juice", name: "Island Glow",
-    img: "/assets/img/ph-island-glow.svg",
+    img: "/assets/img/island-glow.jpg",
     ingredients: "Watermelon, Cucumber, Pineapple, Lime, Ginger",
     benefits: ["Hydration", "Collagen Boost", "Digestion Aid", "Refreshing Energy"],
     sizes: JUICE_SIZES,
