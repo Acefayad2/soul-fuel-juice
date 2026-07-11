@@ -32,12 +32,23 @@
 }
 </script>
 <script>
-if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  document.addEventListener("DOMContentLoaded", function () {
-    var v = document.querySelector(".hero video");
-    if (v) { v.removeAttribute("autoplay"); v.pause(); }
+// Keep the hero video looping continuously with no play button.
+document.addEventListener("DOMContentLoaded", function () {
+  var v = document.querySelector(".hero video");
+  if (!v) return;
+  v.muted = true; v.loop = true; v.removeAttribute("controls");
+  var keepPlaying = function () {
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+  };
+  keepPlaying();
+  v.addEventListener("pause", keepPlaying);
+  v.addEventListener("ended", keepPlaying);
+  // resume when tab/window regains focus
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) keepPlaying();
   });
-}
+});
 </script>
 </head>
 <body>
