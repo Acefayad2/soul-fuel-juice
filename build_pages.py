@@ -354,7 +354,8 @@ index_jsonld = '''<script type="application/ld+json">
 document.addEventListener("DOMContentLoaded", function () {
   var v = document.querySelector(".hero video");
   if (!v) return;
-  v.muted = true; v.loop = true; v.removeAttribute("controls");
+  v.muted = true; v.defaultMuted = true; v.loop = true;
+  v.setAttribute("muted", ""); v.removeAttribute("controls");
   var keepPlaying = function () {
     var p = v.play();
     if (p && p.catch) p.catch(function () {});
@@ -364,6 +365,15 @@ document.addEventListener("DOMContentLoaded", function () {
   v.addEventListener("ended", keepPlaying);
   document.addEventListener("visibilitychange", function () {
     if (!document.hidden) keepPlaying();
+  });
+  var kick = function () {
+    keepPlaying();
+    ["pointerdown", "keydown", "scroll", "touchstart", "mousemove"].forEach(function (ev) {
+      window.removeEventListener(ev, kick);
+    });
+  };
+  ["pointerdown", "keydown", "scroll", "touchstart", "mousemove"].forEach(function (ev) {
+    window.addEventListener(ev, kick, { passive: true });
   });
 });
 </script>'''

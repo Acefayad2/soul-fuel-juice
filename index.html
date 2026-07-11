@@ -36,7 +36,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   var v = document.querySelector(".hero video");
   if (!v) return;
-  v.muted = true; v.loop = true; v.removeAttribute("controls");
+  v.muted = true; v.defaultMuted = true; v.loop = true;
+  v.setAttribute("muted", ""); v.removeAttribute("controls");
   var keepPlaying = function () {
     var p = v.play();
     if (p && p.catch) p.catch(function () {});
@@ -44,9 +45,19 @@ document.addEventListener("DOMContentLoaded", function () {
   keepPlaying();
   v.addEventListener("pause", keepPlaying);
   v.addEventListener("ended", keepPlaying);
-  // resume when tab/window regains focus
   document.addEventListener("visibilitychange", function () {
     if (!document.hidden) keepPlaying();
+  });
+  // If the browser blocks autoplay (e.g. Low Power Mode / Safari auto-play
+  // setting), start the video on the first user interaction, then stop listening.
+  var kick = function () {
+    keepPlaying();
+    ["pointerdown", "keydown", "scroll", "touchstart", "mousemove"].forEach(function (ev) {
+      window.removeEventListener(ev, kick);
+    });
+  };
+  ["pointerdown", "keydown", "scroll", "touchstart", "mousemove"].forEach(function (ev) {
+    window.addEventListener(ev, kick, { passive: true });
   });
 });
 </script>
