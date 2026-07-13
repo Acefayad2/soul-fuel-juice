@@ -122,7 +122,7 @@ const PRODUCTS = [
   },
   {
     id: "detox-7day", type: "bundle", name: "7-Day Detox + Devotional",
-    img: "/assets/img/styled-greens-moss.jpg",
+    img: "/assets/img/faith-fit-reset.jpg",
     ingredients: "21 juices + wellness shots + 7-Day Faith & Fit Devotional",
     benefits: ["21 Juices", "Wellness Shots", "7-Day Devotional"],
     sizes: [
@@ -132,14 +132,14 @@ const PRODUCTS = [
   },
   {
     id: "soul-slim-3", type: "bundle", name: "3-Day Soul Slim Reset",
-    img: "/assets/img/ph-soul-slim.svg",
+    img: "/assets/img/soul-slim-line.jpg",
     ingredients: "6 detox juices + Soul Slim Reset Guide + Discipline Tracker",
     benefits: ["Most Popular", "Reduce Bloating", "Boost Metabolism"],
     sizes: [{ label: "3-Day Reset", price: 49 }],
   },
   {
     id: "soul-slim-7", type: "bundle", name: "7-Day Soul Slim Transformation",
-    img: "/assets/img/ph-soul-slim-7.svg",
+    img: "/assets/img/soul-slim-line.jpg",
     ingredients: "14 juices + Reset Guide + Discipline Tracker",
     benefits: ["Premium Reset", "14 Juices", "Full Transformation"],
     sizes: [{ label: "7-Day Reset", price: 99 }],
