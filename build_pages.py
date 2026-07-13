@@ -502,7 +502,7 @@ cleanse_body = f'''
     <div class="grid grid--2" data-product-grid="bundle" data-products="detox-3day,detox-7day"></div>
     <div class="notice-band mt-lg reveal">
       {ICONS["book"]} <strong>The 7-Day Faith &amp; Fit Devotional</strong> is also available as an instant digital download &mdash;
-      <a href="https://payhip.com/b/FTIlB" rel="noopener" target="_blank">get it here</a>. Juice Cleanse Guide, Wellness Guide &amp; Nutrition Information downloads coming soon.
+      <a href="https://payhip.com/b/FTiIB" rel="noopener" target="_blank">get it here</a>. Juice Cleanse Guide, Wellness Guide &amp; Nutrition Information downloads coming soon.
     </div>
   </div>
 </section>
