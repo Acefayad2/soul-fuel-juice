@@ -250,3 +250,15 @@
   renderCartCount();
   renderCartDrawer();
 })();
+
+/* Load Square card checkout (stays dormant until js/square-config.js is filled in) */
+(function () {
+  var cfg = document.createElement("script");
+  cfg.src = "/js/square-config.js";
+  cfg.onload = function () {
+    var chk = document.createElement("script");
+    chk.src = "/js/square-checkout.js";
+    document.body.appendChild(chk);
+  };
+  document.body.appendChild(cfg);
+})();
