@@ -13,7 +13,7 @@
  * then the site falls back to the existing "pay by Cash App / Zelle" flow.
  */
 window.SQUARE_CONFIG = {
-  APP_ID: "sandbox-sq0idb-8jgUgU113NkT8-oAgf2xiw",
-  LOCATION_ID: "LSXKDVXX90XFW",
-  ENVIRONMENT: "sandbox", // "sandbox" or "production"
+  APP_ID: "sq0idp--mDOxRLwAWdcUXqTOayj5Q",
+  LOCATION_ID: "L41T8XMRT0Q31",
+  ENVIRONMENT: "production", // "sandbox" or "production"
 };
