@@ -35,6 +35,15 @@
   if (submitBtn) submitBtn.style.display = "none";
   form.appendChild(ui);
 
+  // Update the modal intro copy (was written for the Cash App / Zelle flow).
+  var intro = modal.querySelector(".modal > p.muted");
+  if (intro) {
+    intro.innerHTML =
+      "Pay securely by card below. Your order is confirmed instantly and we’ll " +
+      "reach out about delivery or shipping. Card details are handled by Square — " +
+      "we never see or store them.";
+  }
+
   var statusEl = ui.querySelector("#sfj-pay-status");
   var payBtn = ui.querySelector("#sfj-pay-btn");
 
