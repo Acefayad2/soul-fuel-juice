@@ -17,3 +17,8 @@ window.SQUARE_CONFIG = {
   LOCATION_ID: "L41T8XMRT0Q31",
   ENVIRONMENT: "production", // "sandbox" or "production"
 };
+
+/* Google Sheet order-tracking webhook (Google Apps Script Web App /exec URL).
+ * Paste the deployed web-app URL here to log every order to the
+ * "Soul Fuel Juice — Orders" sheet. Leave blank to disable logging. */
+window.SHEETS_WEBHOOK = "";

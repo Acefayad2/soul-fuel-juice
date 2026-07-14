@@ -247,6 +247,40 @@
     toast("Message sent! We'll get back to you soon.");
   }
 
+  /* ---------- Order logging to Google Sheet (Apps Script webhook) ---------- */
+  function logOrder(order) {
+    var url = window.SHEETS_WEBHOOK;
+    if (!url) return;
+    try {
+      fetch(url, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(order),
+      });
+    } catch (e) {}
+  }
+  window.sfjLogOrder = logOrder;
+
+  // Manual (Cash App / Zelle) orders: log on submit of the Netlify order form.
+  var orderForm = document.querySelector(".checkout-modal form[name='order']");
+  if (orderForm) {
+    orderForm.addEventListener("submit", function () {
+      var cart = getCart();
+      logOrder({
+        name: (orderForm.querySelector("[name='name']") || {}).value || "",
+        phone: (orderForm.querySelector("[name='phone']") || {}).value || "",
+        email: (orderForm.querySelector("[name='email']") || {}).value || "",
+        fulfillment: (orderForm.querySelector("[name='fulfillment']") || {}).value || "",
+        address: (orderForm.querySelector("[name='address']") || {}).value || "",
+        items: cart.map(function (i) { return i.qty + "x " + i.name + " (" + i.size + ")"; }).join(", "),
+        total: "$" + cart.reduce(function (s, i) { return s + i.price * i.qty; }, 0),
+        payment: "Cash App/Zelle (pending)",
+        notes: (orderForm.querySelector("[name='notes']") || {}).value || "",
+      });
+    });
+  }
+
   renderCartCount();
   renderCartDrawer();
 })();

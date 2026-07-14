@@ -51,7 +51,7 @@
   if (intro) {
     intro.innerHTML =
       "Pay securely below — card, Apple Pay, or Google Pay. Your order is confirmed " +
-      "instantly and we’ll reach out about pickup or shipping. Payments are handled by " +
+      "instantly and we’ll reach out about delivery, pickup, or shipping. Payments are handled by " +
       "Square — we never see or store your card.";
   }
 
@@ -199,6 +199,18 @@
       return false;
     }
 
+    if (window.sfjLogOrder) {
+      window.sfjLogOrder({
+        order: data.paymentId || "",
+        name: customer.name, phone: customer.phone, email: customer.email,
+        fulfillment: customer.fulfillment, address: customer.address,
+        items: cart.map(function (i) { return i.qty + "x " + i.name + " (" + i.size + ")"; }).join(", "),
+        total: "$" + data.amount,
+        payment: "Card / Apple Pay / Google Pay",
+        notes: customer.notes,
+      });
+    }
+
     localStorage.removeItem(CART_KEY);
     document.querySelectorAll(".cart-count").forEach(function (el) { el.textContent = "0"; el.style.display = "none"; });
     var modalInner = modal.querySelector(".modal");
@@ -207,7 +219,7 @@
         '<button type="button" class="modal-close" aria-label="Close">&times;</button>' +
         '<h2>Thank you &amp; God bless! &#10084;</h2>' +
         '<p>Your payment of <strong>' + money(Number(data.amount)) + '</strong> went through. ' +
-        "We&rsquo;ll confirm your pickup or shipping details by text or email shortly.</p>" +
+        "We&rsquo;ll confirm your delivery, pickup, or shipping details by text or email shortly.</p>" +
         '<p class="muted" style="font-size:.9rem">Questions? Call or text 301-892-6707.</p>';
     }
     return true;
