@@ -144,4 +144,13 @@ const PRODUCTS = [
     benefits: ["Premium Reset", "14 Juices", "Full Transformation"],
     sizes: [{ label: "7-Day Reset", price: 99 }],
   },
+
+  /* ---- Digital downloads ---- */
+  {
+    id: "faith-fit-reset", type: "digital", name: "The 7-Day Faith & Fit Reset",
+    img: "/assets/img/faith-fit-reset.jpg",
+    ingredients: "Instant digital download — full eBook + printable 7-Day Discipline Tracker",
+    benefits: ["eBook", "Discipline Tracker", "Instant Download"],
+    sizes: [{ label: "eBook + Tracker", price: 10 }],
+  },
 ];

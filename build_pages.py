@@ -511,12 +511,12 @@ cleanse_body = f'''
       <div class="reveal">
         <span class="eyebrow">Instant digital download</span>
         <h2>The 7-Day Faith &amp; Fit Reset</h2>
-        <p class="muted">A faith-centered guide for discipline, balance, and results &mdash; devotions, reflections, and a simple plan to reset your body and spirit. <em>&ldquo;True transformation starts within.&rdquo;</em></p>
+        <p class="muted">You don&rsquo;t need another diet &mdash; you need a reset. A balanced, faith-centered guide to reduce bloating, control cravings, and rebuild discipline in just 7 days. <em>&ldquo;True transformation starts within.&rdquo;</em></p>
         <a class="btn btn--gold" href="devotional.html">
-          Get the Devotional
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          Learn More
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <p class="muted" style="font-size:.85rem;margin-top:14px">Delivered instantly through Payhip. Juice Cleanse Guide, Wellness Guide &amp; Nutrition Information downloads coming soon.</p>
+        <p class="muted" style="font-size:.85rem;margin-top:14px">Includes the full eBook &amp; a printable 7-Day Discipline Tracker. Juice Cleanse Guide, Wellness Guide &amp; Nutrition Information downloads coming soon.</p>
       </div>
     </div>
   </div>
