@@ -505,14 +505,14 @@ cleanse_body = f'''
 <section class="section" id="devotional">
   <div class="container">
     <div class="split">
-      <a class="split-media reveal" href="https://payhip.com/b/FTiIB" rel="noopener" target="_blank" aria-label="Get The 7-Day Faith &amp; Fit Reset devotional on Payhip">
+      <a class="split-media reveal" href="devotional.html" aria-label="Learn about The 7-Day Faith &amp; Fit Reset">
         <img src="assets/img/faith-fit-reset.jpg" alt="The 7-Day Faith &amp; Fit Reset devotional by Josephine Sanso" loading="lazy" width="800" height="680">
       </a>
       <div class="reveal">
         <span class="eyebrow">Instant digital download</span>
         <h2>The 7-Day Faith &amp; Fit Reset</h2>
         <p class="muted">A faith-centered guide for discipline, balance, and results &mdash; devotions, reflections, and a simple plan to reset your body and spirit. <em>&ldquo;True transformation starts within.&rdquo;</em></p>
-        <a class="btn btn--gold" href="https://payhip.com/b/FTiIB" rel="noopener" target="_blank">
+        <a class="btn btn--gold" href="devotional.html">
           Get the Devotional
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
         </a>
