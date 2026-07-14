@@ -52,6 +52,26 @@
     statusEl.style.color = isError ? "#B3261E" : "var(--forest-3)";
   }
 
+  // If card payments aren't available yet (e.g. Square account not enabled),
+  // reveal the Cash App / Zelle order option so the customer can still order.
+  var fellBack = false;
+  function revealFallback() {
+    if (fellBack) return;
+    fellBack = true;
+    var container = ui.querySelector("#sfj-card-container");
+    if (container) container.parentElement.style.display = "none";
+    payBtn.style.display = "none";
+    if (payInfo) payInfo.style.display = "";
+    if (submitBtn) submitBtn.style.display = "";
+    var intro = modal.querySelector(".modal > p.muted");
+    if (intro) {
+      intro.innerHTML =
+        "Send us your order below and we’ll confirm your total, then you pay by " +
+        "Cash App or Zelle. (Card payment is being set up.)";
+    }
+    setStatus("", false);
+  }
+
   function orderTotal() {
     var cart = getCart();
     var total = cart.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
@@ -138,7 +158,13 @@
       });
       var data = await resp.json();
       if (!resp.ok || !data.ok) {
-        setStatus(data.error || "Payment could not be completed.", true);
+        var msg = data.error || "Payment could not be completed.";
+        // Store not ready for cards yet, or a server/config error -> offer manual order.
+        if (resp.status >= 500 || /not been enabled|not configured|service error|not configured yet/i.test(msg)) {
+          revealFallback();
+        } else {
+          setStatus(msg, true);
+        }
         payBtn.disabled = false;
         return;
       }
