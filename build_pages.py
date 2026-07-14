@@ -89,7 +89,7 @@ CART_AND_CHECKOUT = f'''
   <div class="cart-items"></div>
   <div class="cart-foot">
     <div class="cart-total-row"><span>Subtotal</span><span class="cart-total">$0</span></div>
-    <p class="cart-note">Local delivery in Hagerstown, MD &amp; surrounding areas · $18 flat-rate shipping nationwide (added when we confirm your order). Please order 24&ndash;48 hours before delivery.</p>
+    <p class="cart-note">Pickup in Hagerstown, MD, or $18 flat-rate shipping nationwide (added when we confirm your order). Please order 24&ndash;48 hours ahead.</p>
     <button type="button" class="btn btn--gold checkout-btn">Place Order</button>
   </div>
 </aside>
@@ -108,14 +108,13 @@ CART_AND_CHECKOUT = f'''
         <div class="field"><label for="o-name">Name <span class="req">*</span></label><input id="o-name" name="name" required autocomplete="name"></div>
         <div class="field"><label for="o-phone">Phone <span class="req">*</span></label><input id="o-phone" name="phone" type="tel" required autocomplete="tel"></div>
         <div class="field field--full"><label for="o-email">Email</label><input id="o-email" name="email" type="email" autocomplete="email"></div>
-        <div class="field"><label for="o-fulfill">Delivery or Pickup <span class="req">*</span></label>
+        <div class="field"><label for="o-fulfill">Pickup or Shipping <span class="req">*</span></label>
           <select id="o-fulfill" name="fulfillment" required>
-            <option>Local delivery (Hagerstown area)</option>
             <option>Pickup</option>
             <option>Ship to me ($18 flat rate)</option>
           </select></div>
         <div class="field"><label for="o-date">Preferred date <span class="req">*</span></label><input id="o-date" name="preferred-date" type="date" required><span class="hint">Please allow 24&ndash;48 hours</span></div>
-        <div class="field field--full"><label for="o-address">Delivery / shipping address</label><input id="o-address" name="address" autocomplete="street-address"></div>
+        <div class="field field--full"><label for="o-address">Shipping address (if shipping)</label><input id="o-address" name="address" autocomplete="street-address"></div>
         <div class="field field--full"><label for="o-notes">Notes (flavor choices, allergies, etc.)</label><textarea id="o-notes" name="notes" rows="3"></textarea></div>
       </div>
       <div class="pay-info" style="margin:18px 0">
@@ -380,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 page("index.html",
      "Soul Fuel Juice | Cold-Pressed Juice & Wellness — Hagerstown, MD",
-     "Fresh cold-pressed juices, wellness shots, and faith-centered detox programs made in Hagerstown, Maryland. No added sugar, no preservatives. Local delivery & nationwide shipping.",
+     "Fresh cold-pressed juices, wellness shots, and faith-centered detox programs made in Hagerstown, Maryland. No added sugar, no preservatives. Local pickup & nationwide shipping.",
      index_body, index_jsonld)
 
 # ============================== SHOP ==============================
@@ -389,7 +388,7 @@ shop_body = '''
   <div class="container">
     <span class="eyebrow">Pure. Fresh. Purposeful.</span>
     <h1>Shop Soul Fuel Juice</h1>
-    <p>Cold-pressed juices, wellness shots, and cleanse bundles &mdash; made fresh in small batches. Order 24&ndash;48 hours ahead for delivery.</p>
+    <p>Cold-pressed juices, wellness shots, and cleanse bundles &mdash; made fresh in small batches. Order 24&ndash;48 hours ahead for pickup or shipping.</p>
   </div>
 </section>
 <section class="section">
@@ -403,7 +402,7 @@ shop_body = '''
     <div class="grid grid--3" data-product-grid="all"></div>
     <div class="notice-band mt-lg">
       <strong>Sizes &amp; pricing:</strong> single bottles &mdash; 8&nbsp;oz $9 · 12&nbsp;oz $12 · 16&nbsp;oz $15 · 20&nbsp;oz $18.
-      $18 flat-rate shipping nationwide, packed with care and shipped fresh. Local delivery available in Hagerstown, MD &amp; surrounding areas.
+      $18 flat-rate shipping nationwide, packed with care and shipped fresh. Pickup available in Hagerstown, MD.
     </div>
   </div>
 </section>
@@ -411,7 +410,7 @@ shop_body = '''
 
 page("shop.html",
      "Shop Cold-Pressed Juice, Wellness Shots & Cleanses | Soul Fuel Juice",
-     "Shop fresh cold-pressed juice online: Healing Greens, Carrot Glow, Beet & Bless, wellness shots, and juice cleanse bundles. Maryland local delivery & nationwide shipping.",
+     "Shop fresh cold-pressed juice online: Healing Greens, Carrot Glow, Beet & Bless, wellness shots, and juice cleanse bundles. Maryland pickup & nationwide shipping.",
      shop_body)
 
 # ============================== CLEANSE ==============================
@@ -670,9 +669,9 @@ faqs = [
     ("How fresh is the juice, and how long does it last?",
      "Every juice is cold-pressed in small batches and made fresh daily. Because we use zero preservatives, we recommend keeping your juice refrigerated and enjoying it within 3–5 days."),
     ("How far in advance do I need to order?",
-     "Please place orders 24–48 hours before your delivery or pickup date so we can press your juice fresh."),
-    ("Where do you deliver?",
-     "Local delivery is available in Hagerstown, MD and surrounding areas — message us for details. We also ship nationwide for an $18 flat rate, packed with care and shipped fresh."),
+     "Please place orders 24–48 hours before your pickup or shipping date so we can press your juice fresh."),
+    ("Where can I get my juice?",
+     "Pickup is available in Hagerstown, MD. We also ship nationwide for a $18 flat rate, packed with care and shipped fresh."),
     ("How do I pay?",
      "After you place your order, we confirm your total and you pay via Cash App ($Josiejo87) or Zelle (301-892-6707). Simple and secure."),
     ("Is there really no added sugar?",
@@ -700,7 +699,7 @@ faq_body = f'''
   <div class="container">
     <span class="eyebrow">Good questions</span>
     <h1>Frequently Asked Questions</h1>
-    <p>Everything you need to know about ordering, freshness, delivery, and cleansing.</p>
+    <p>Everything you need to know about ordering, freshness, shipping, and cleansing.</p>
   </div>
 </section>
 <section class="section">
@@ -712,8 +711,8 @@ faq_body = f'''
 ''' + NEWSLETTER
 
 page("faq.html",
-     "FAQ | Soul Fuel Juice — Ordering, Freshness, Delivery & Cleanses",
-     "Answers to common questions about Soul Fuel Juice: how fresh our cold-pressed juice is, delivery areas, payment, and how the Soul Slim Reset cleanse works.",
+     "FAQ | Soul Fuel Juice — Ordering, Freshness, Shipping & Cleanses",
+     "Answers to common questions about Soul Fuel Juice: how fresh our cold-pressed juice is, pickup & shipping, payment, and how the Soul Slim Reset cleanse works.",
      faq_body,
      f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{faq_jsonld_items}]}}</script>')
 
@@ -940,7 +939,7 @@ contact_body = f'''
         <div class="contact-info">
           <div class="contact-line">{ICONS["phone"]}<div><h3 style="font-size:1.05rem;margin-bottom:2px">Call or Text</h3><p style="margin:0"><a href="tel:+13018926707">301-892-6707</a></p></div></div>
           <div class="contact-line">{ICONS["mail"]}<div><h3 style="font-size:1.05rem;margin-bottom:2px">Email</h3><p style="margin:0"><a href="mailto:soulfueljuice@gmail.com">soulfueljuice@gmail.com</a></p></div></div>
-          <div class="contact-line">{ICONS["pin"]}<div><h3 style="font-size:1.05rem;margin-bottom:2px">Based In</h3><p style="margin:0">Hagerstown, Maryland<br><span class="muted" style="font-size:.88rem">Local delivery in Hagerstown &amp; surrounding areas · nationwide shipping</span></p></div></div>
+          <div class="contact-line">{ICONS["pin"]}<div><h3 style="font-size:1.05rem;margin-bottom:2px">Based In</h3><p style="margin:0">Hagerstown, Maryland<br><span class="muted" style="font-size:.88rem">Pickup in Hagerstown, MD &amp; nationwide shipping</span></p></div></div>
           <div class="contact-line">{ICONS["heart"]}<div><h3 style="font-size:1.05rem;margin-bottom:2px">Follow Along</h3><p style="margin:0"><a href="https://instagram.com/soulfueljuice_" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.tiktok.com/@soulfueljuice" rel="noopener" target="_blank">TikTok</a> · Facebook: Soul Fuel Juice</p></div></div>
         </div>
         <div class="map-embed mt-lg">
@@ -969,9 +968,9 @@ shipping_body = f'''
 <section class="section">
   <div class="container">
     <div class="grid grid--3">
-      <div class="step reveal"><h3>Local Delivery</h3><p>Available in Hagerstown, MD &amp; surrounding areas &mdash; including Frederick and Gaithersburg by arrangement. Message us for details and delivery windows.</p></div>
+      <div class="step reveal"><h3>Local Pickup</h3><p>Available in Hagerstown, MD &mdash; arrange a pickup time when we confirm your order. Message us for details.</p></div>
       <div class="step reveal"><h3>Nationwide Shipping</h3><p>$18 flat-rate shipping on all orders. Every box is packed with care and shipped fresh with cold packaging. Shipping is not included in product prices.</p></div>
-      <div class="step reveal"><h3>Order Timing</h3><p>Please order 24&ndash;48 hours before your preferred delivery date. Everything is pressed fresh to order &mdash; no warehouse stock, ever.</p></div>
+      <div class="step reveal"><h3>Order Timing</h3><p>Please order 24&ndash;48 hours before your preferred pickup or ship date. Everything is pressed fresh to order &mdash; no warehouse stock, ever.</p></div>
     </div>
     <div class="legal-wrap mt-lg">
       <h2>Keeping your juice fresh</h2>
@@ -987,7 +986,7 @@ shipping_body = f'''
 
 page("shipping.html",
      "Shipping & Delivery | Soul Fuel Juice",
-     "Soul Fuel Juice delivery details: local delivery in Hagerstown, MD & surrounding areas, $18 flat-rate nationwide shipping, and 24–48 hour fresh-press order timing.",
+     "Soul Fuel Juice pickup & shipping details: local pickup in Hagerstown, MD, $18 flat-rate nationwide shipping, and 24–48 hour fresh-press order timing.",
      shipping_body)
 
 # ============================== PRIVACY ==============================
@@ -999,7 +998,7 @@ privacy_body = '''
   <div class="container legal-wrap">
     <p>Soul Fuel Juice LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) respects your privacy. This policy explains what information we collect through soulfueljuice.com and how we use it.</p>
     <h2>Information we collect</h2>
-    <p>When you place an order, contact us, leave a review, or subscribe to our newsletter, we collect the information you provide: your name, phone number, email address, delivery address, and order details. We do not collect or store payment card information on this website &mdash; payments are completed through Cash App or Zelle.</p>
+    <p>When you place an order, contact us, leave a review, or subscribe to our newsletter, we collect the information you provide: your name, phone number, email address, shipping address, and order details. We do not collect or store payment card information on this website &mdash; payments are completed through Cash App or Zelle.</p>
     <h2>How we use your information</h2>
     <p>We use your information to fulfill and deliver orders, respond to your messages, send the newsletter you subscribed to, and improve our products and website. We do not sell, rent, or trade your personal information to third parties.</p>
     <h2>Cookies &amp; local storage</h2>
@@ -1031,9 +1030,9 @@ terms_body = '''
     <h2>Products &amp; freshness</h2>
     <p>All juices and wellness shots are made fresh in small batches with no preservatives. Products must be refrigerated upon receipt and consumed within 3&ndash;5 days. Natural separation and settling are normal.</p>
     <h2>Orders &amp; payment</h2>
-    <p>Orders should be placed 24&ndash;48 hours before your preferred delivery or pickup date. Orders are confirmed by text or email and paid via Cash App or Zelle. An order is scheduled for production once payment is received. Prices are subject to change without notice.</p>
+    <p>Orders should be placed 24&ndash;48 hours before your preferred pickup or shipping date. Orders are confirmed by text or email and paid via Cash App or Zelle. An order is scheduled for production once payment is received. Prices are subject to change without notice.</p>
     <h2>Delivery &amp; shipping</h2>
-    <p>Local delivery is available in Hagerstown, MD and surrounding areas. Nationwide shipping is a flat $18 and is not included in product prices. We are not responsible for delays caused by carriers or for product quality issues resulting from packages left unrefrigerated after delivery.</p>
+    <p>Local pickup is available in Hagerstown, MD. Nationwide shipping is a flat $18 and is not included in product prices. We are not responsible for delays caused by carriers or for product quality issues resulting from packages left unrefrigerated after delivery.</p>
     <h2>Refunds</h2>
     <p>Because our products are perishable and made to order, all sales are final. If something is wrong with your order, contact us within 24 hours of receipt and we will make it right.</p>
     <h2>Health disclaimer</h2>
@@ -1047,7 +1046,7 @@ terms_body = '''
 
 page("terms.html",
      "Terms & Conditions | Soul Fuel Juice",
-     "Terms and conditions for ordering from Soul Fuel Juice LLC: freshness, payment, delivery, refunds, and health disclaimer.",
+     "Terms and conditions for ordering from Soul Fuel Juice LLC: freshness, payment, shipping, refunds, and health disclaimer.",
      terms_body)
 
 print("\nAll pages generated.")
