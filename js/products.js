@@ -132,14 +132,14 @@ const PRODUCTS = [
   },
   {
     id: "soul-slim-3", type: "bundle", name: "3-Day Soul Slim Reset",
-    img: "/assets/img/soul-slim-line.jpg",
+    img: "/assets/img/detox-lineup.jpg",
     ingredients: "6 detox juices + Soul Slim Reset Guide + Discipline Tracker",
     benefits: ["Most Popular", "Reduce Bloating", "Boost Metabolism"],
     sizes: [{ label: "3-Day Reset", price: 49 }],
   },
   {
     id: "soul-slim-7", type: "bundle", name: "7-Day Soul Slim Transformation",
-    img: "/assets/img/soul-slim-line.jpg",
+    img: "/assets/img/detox-lineup.jpg",
     ingredients: "14 juices + Reset Guide + Discipline Tracker",
     benefits: ["Premium Reset", "14 Juices", "Full Transformation"],
     sizes: [{ label: "7-Day Reset", price: 99 }],

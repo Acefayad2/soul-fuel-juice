@@ -46,7 +46,7 @@ def head(title, desc, path, extra=""):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://soulfueljuice.com/assets/img/juice-trio.jpg">
+<meta property="og:image" content="https://soulfueljuice.com/assets/img/juice-trio.png">
 <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -488,7 +488,7 @@ cleanse_body = f'''
         <span>Reduce bloating</span><span>Support healthy weight loss</span><span>Boost metabolism</span><span>Improve digestion</span><span>Increase natural energy</span>
       </div>
     </div>
-    <div class="split-media reveal"><img src="assets/img/lineup.jpg" alt="Full lineup of Soul Fuel Juice cold-pressed juices" loading="lazy" width="1600" height="900"></div>
+    <div class="split-media reveal"><img src="assets/img/detox-lineup.png" alt="Soul Slim detox cleanse bottle lineup" loading="lazy" width="1254" height="1254"></div>
   </div>
 </section>
 
@@ -549,7 +549,7 @@ benefits_body = f'''
 
 <section class="section">
   <div class="container split">
-    <div class="split-media reveal"><img src="assets/img/juice-trio.jpg" alt="Carrot Glow, Beet & Bless, and Healing Greens cold-pressed juices" loading="lazy" width="1600" height="1200"></div>
+    <div class="split-media reveal"><img src="assets/img/juice-trio.png" alt="Carrot Glow, Beet & Bless, and Healing Greens cold-pressed juices" loading="lazy" width="1254" height="1254"></div>
     <div class="reveal">
       <span class="eyebrow">Never heated, never rushed</span>
       <h2>Why Cold-Pressed Matters</h2>
@@ -762,7 +762,7 @@ posts = [
         "title": "Why Cold-Pressed? 5 Reasons Your Body Will Thank You",
         "desc": "What makes cold-pressed juice different from store-bought juice — and why it matters for nutrition, energy, and gut health.",
         "date": "July 2026", "tag": "Nutrition",
-        "img": "../assets/img/juice-trio.jpg",
+        "img": "../assets/img/juice-trio.png",
         "alt": "Three Soul Fuel Juice cold-pressed juices",
         "body": '''
 <p>Walk down any grocery aisle and you&rsquo;ll see shelves of &ldquo;juice&rdquo; that spent months in a warehouse. Most of it was heat-pasteurized, reconstituted from concentrate, and sweetened along the way. Cold-pressed juice is a different food entirely. Here&rsquo;s why.</p>
@@ -784,8 +784,8 @@ posts = [
         "title": "How to Prepare for Your First Juice Cleanse (Body & Soul)",
         "desc": "A practical, grace-filled guide to getting ready for a 3-day juice cleanse — what to eat before, what to expect, and how to finish strong.",
         "date": "July 2026", "tag": "Cleanse",
-        "img": "../assets/img/lineup.jpg",
-        "alt": "A lineup of Soul Fuel Juice detox juices",
+        "img": "../assets/img/detox-lineup.png",
+        "alt": "Soul Slim detox cleanse bottle lineup",
         "body": '''
 <p>A cleanse works best when you ease into it. If you&rsquo;ve booked a 3-Day Soul Slim Reset (or you&rsquo;re thinking about it), here&rsquo;s how to set yourself up for success &mdash; physically and spiritually.</p>
 <h2>Three days before: lighten the load</h2>
