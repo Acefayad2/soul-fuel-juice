@@ -21,4 +21,4 @@ window.SQUARE_CONFIG = {
 /* Google Sheet order-tracking webhook (Google Apps Script Web App /exec URL).
  * Paste the deployed web-app URL here to log every order to the
  * "Soul Fuel Juice — Orders" sheet. Leave blank to disable logging. */
-window.SHEETS_WEBHOOK = "";
+window.SHEETS_WEBHOOK = "https://script.google.com/macros/s/AKfycbyTr-duDH27gRDLMZaDZN0zBok33EPPYZ5wqQrrhSmfsG645Wo02abyOmbMCC4uU_lx/exec";
