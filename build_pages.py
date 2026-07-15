@@ -217,7 +217,7 @@ NEWSLETTER = '''
 # ============================== INDEX ==============================
 index_body = f'''
 <section class="hero">
-  <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg" aria-hidden="true">
+  <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg?v=2" aria-hidden="true">
     <source src="assets/video/hero.mp4" type="video/mp4">
   </video>
   <div class="container">
@@ -256,7 +256,7 @@ index_body = f'''
 
 <section class="section section--forest">
   <div class="container split">
-    <div class="split-media reveal"><img src="assets/img/styled-greens-moss.jpg" alt="Healing Greens cold-pressed juice bottle in a natural setting" loading="lazy" width="1400" height="1244"></div>
+    <div class="split-media reveal"><img src="assets/img/styled-greens-moss.jpg?v=2" alt="Healing Greens cold-pressed juice bottle in a natural setting" loading="lazy" width="1400" height="1244"></div>
     <div class="reveal">
       <span class="eyebrow">Made with purpose</span>
       <h2>More Than Juice &mdash; It&rsquo;s a Ministry of Wellness</h2>
@@ -488,7 +488,7 @@ cleanse_body = f'''
         <span>Reduce bloating</span><span>Support healthy weight loss</span><span>Boost metabolism</span><span>Improve digestion</span><span>Increase natural energy</span>
       </div>
     </div>
-    <div class="split-media reveal"><img src="assets/img/detox-lineup.png" alt="Soul Slim detox cleanse bottle lineup" loading="lazy" width="1254" height="1254"></div>
+    <div class="split-media reveal"><img src="assets/img/detox-lineup.png?v=2" alt="Soul Slim detox cleanse bottle lineup" loading="lazy" width="1254" height="1254"></div>
   </div>
 </section>
 
@@ -507,7 +507,7 @@ cleanse_body = f'''
   <div class="container">
     <div class="split">
       <a class="split-media reveal" href="devotional.html" aria-label="Learn about The 7-Day Faith &amp; Fit Reset">
-        <img src="assets/img/faith-fit-reset.jpg" alt="The 7-Day Faith &amp; Fit Reset devotional by Josephine Sanso" loading="lazy" width="800" height="680">
+        <img src="assets/img/faith-fit-reset.jpg?v=2" alt="The 7-Day Faith &amp; Fit Reset devotional by Josephine Sanso" loading="lazy" width="800" height="680">
       </a>
       <div class="reveal">
         <span class="eyebrow">Instant digital download</span>
@@ -565,7 +565,7 @@ benefits_body = f'''
 
 <section class="section">
   <div class="container split">
-    <div class="split-media reveal"><img src="assets/img/juice-trio.png" alt="Carrot Glow, Beet & Bless, and Healing Greens cold-pressed juices" loading="lazy" width="1254" height="1254"></div>
+    <div class="split-media reveal"><img src="assets/img/juice-trio.png?v=2" alt="Carrot Glow, Beet & Bless, and Healing Greens cold-pressed juices" loading="lazy" width="1254" height="1254"></div>
     <div class="reveal">
       <span class="eyebrow">Never heated, never rushed</span>
       <h2>Why Cold-Pressed Matters</h2>
@@ -623,7 +623,7 @@ about_body = f'''
 
 <section class="section">
   <div class="container split">
-    <div class="split-media reveal"><img src="assets/img/styled-beet-bike.jpg" alt="Beet & Bless juice on a vintage bicycle with flowers" loading="lazy" width="1400" height="1253"></div>
+    <div class="split-media reveal"><img src="assets/img/styled-beet-bike.jpg?v=2" alt="Beet & Bless juice on a vintage bicycle with flowers" loading="lazy" width="1400" height="1253"></div>
     <div class="reveal">
       <span class="eyebrow">Faith-inspired wellness</span>
       <h2>Why We Press</h2>
