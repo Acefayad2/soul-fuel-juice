@@ -102,7 +102,7 @@ const PRODUCTS = [
   /* ---- Bundles & cleanse packs ---- */
   {
     id: "sampler-3", type: "bundle", name: "3-Pack Sampler",
-    img: "/assets/img/juice-trio.jpg?v=2",
+    img: "/assets/img/juice-trio.jpg?v=3",
     ingredients: "Mix & match any three juices — tell us your flavors at checkout",
     benefits: ["Mix & Match", "Best For First-Timers"],
     sizes: [
