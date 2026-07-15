@@ -37,7 +37,9 @@ const PRICES = {
   "faith-fit-reset": { "eBook + Tracker": 10 },
 };
 
-const SHIPPING_FLAT = 18; // $18 flat-rate shipping when the order is shipped
+const SHIPPING_FLAT = 18;   // $18 flat-rate shipping when the order is shipped
+const DELIVERY_FEE = 10;    // $10 local delivery fee...
+const DELIVERY_FREE_MIN = 50; // ...waived on orders of $50+ (items subtotal)
 
 function json(statusCode, obj) {
   return {
@@ -88,15 +90,22 @@ exports.handler = async (event) => {
     lineSummary.push(`${qty}x ${item.id} (${item.size})`);
   }
 
-  const ships = customer && /ship/i.test(customer.fulfillment || "");
-  if (ships) total += SHIPPING_FLAT;
+  const itemsTotal = total;
+  const fulfillment = (customer && customer.fulfillment) || "";
+  const ships = /ship/i.test(fulfillment);
+  const delivers = /deliver/i.test(fulfillment);
+  let fee = 0;
+  let feeLabel = "";
+  if (ships) { fee = SHIPPING_FLAT; feeLabel = " + $18 shipping"; }
+  else if (delivers && itemsTotal < DELIVERY_FREE_MIN) { fee = DELIVERY_FEE; feeLabel = " + $10 delivery"; }
+  total = itemsTotal + fee;
 
   const amountCents = Math.round(total * 100);
   if (amountCents <= 0) return json(400, { error: "Invalid order total." });
 
   const note =
     `Soul Fuel Juice order — ${lineSummary.join(", ")}` +
-    (ships ? " + $18 shipping" : "") +
+    feeLabel +
     (customer && customer.name ? ` | ${customer.name}` : "") +
     (customer && customer.phone ? ` ${customer.phone}` : "") +
     (customer && customer.fulfillment ? ` | ${customer.fulfillment}` : "");

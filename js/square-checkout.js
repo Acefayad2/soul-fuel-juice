@@ -41,6 +41,7 @@
     '<div class="field field--full">' +
       '<label for="sfj-card-container">Pay securely by card <span class="req">*</span></label>' +
       '<div id="sfj-card-container" style="padding:6px 0"></div></div>' +
+    '<p id="sfj-fee-note" style="font-size:.82rem;color:var(--ink-soft);margin:2px 0 6px"></p>' +
     '<p id="sfj-pay-status" role="status" aria-live="polite" style="min-height:1.2em;font-size:.9rem;margin:4px 0 10px"></p>' +
     '<button type="button" id="sfj-pay-btn" class="btn btn--forest" style="width:100%">Pay</button>';
   if (payInfo) payInfo.style.display = "none";
@@ -78,18 +79,33 @@
     }
   }
 
-  function orderTotal() {
+  function subtotalAndFulfillment() {
     var cart = getCart();
-    var total = cart.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
-    var fulfill = form.querySelector("[name='fulfillment']");
-    if (fulfill && /ship/i.test(fulfill.value)) total += 18;
-    return total;
+    var subtotal = cart.reduce(function (s, i) { return s + i.price * i.qty; }, 0);
+    var f = form.querySelector("[name='fulfillment']");
+    return { subtotal: subtotal, v: f ? f.value : "" };
+  }
+
+  function orderTotal() {
+    var x = subtotalAndFulfillment();
+    if (/ship/i.test(x.v)) return x.subtotal + 18;
+    if (/deliver/i.test(x.v) && x.subtotal < 50) return x.subtotal + 10;
+    return x.subtotal;
+  }
+
+  function feeNote() {
+    var x = subtotalAndFulfillment();
+    if (/ship/i.test(x.v)) return "Includes $18 flat-rate shipping.";
+    if (/deliver/i.test(x.v)) return x.subtotal >= 50 ? "Free local delivery (order $50+)." : "Includes a $10 local delivery fee.";
+    return "";
   }
 
   function refreshAmount() {
     var t = orderTotal();
     payBtn.textContent = "Pay " + money(t);
     payBtn.disabled = t <= 0;
+    var note = document.getElementById("sfj-fee-note");
+    if (note) note.textContent = feeNote();
   }
 
   function loadSdk() {
