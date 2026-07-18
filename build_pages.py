@@ -506,6 +506,17 @@ cleanse_body = f'''
   </div>
 </section>
 
+<section class="section section--cream2">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Go deeper</span>
+      <h2>Detox Challenge Packages</h2>
+      <p>Our classic multi-day packs pair fresh juice with the 7-Day Faith &amp; Fit Devotional &mdash; discipline and stewardship for body and soul (James 2:17).</p>
+    </div>
+    <div class="grid grid--2" data-product-grid="bundle" data-products="detox-3day,detox-7day"></div>
+  </div>
+</section>
+
 <section class="section" id="devotional">
   <div class="container">
     <div class="split">
@@ -726,7 +737,7 @@ testimonials = [
     ("Marcus T.", "Frederick, MD", "I did the 3-Day Soul Slim Reset and felt lighter, clearer, and more disciplined. The devotional made it so much more than a detox."),
     ("Alicia R.", "Baltimore, MD", "Fresh, delicious, and made with so much love. The Fiery Ginger shot is my go-to before every workout."),
     ("Tanya W.", "Gaithersburg, MD", "King's/Queen's Power is everything. You can taste how fresh it is, and I love supporting a faith-led small business."),
-    ("James K.", "Washington, DC", "Ordered the 7-Day Soul Slim Line Transformation for my wife and me. Great communication, fresh juice, and we both felt amazing by day four."),
+    ("James K.", "Washington, DC", "Ordered the 7-Day Detox package for my wife and me. Great communication, fresh juice, and we both felt amazing by day four."),
     ("Renee P.", "Hagerstown, MD", "Beet & Bless got me through marathon training. The name says it all — I truly feel blessed and fueled."),
 ]
 t_cards = "\n".join(
