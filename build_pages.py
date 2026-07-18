@@ -589,7 +589,7 @@ benefits_body = f'''
       <div class="card reveal"><div class="card-body"><span class="card-tag">Healing Greens</span><h3>The Daily Detoxifier</h3><p class="ingredients">Kale, Apple, Cucumber, Spinach, Lemon, Celery, Ginger</p><p class="muted">Detoxifies the body, supports digestion and gut health, boosts immunity, supports hydration and skin &amp; eye health. Ginger soothes the digestive system and reduces inflammation.</p></div></div>
       <div class="card reveal"><div class="card-body"><span class="card-tag">Golden Glow</span><h3>The Sunshine Bottle</h3><p class="ingredients">Mango, Pineapple, Carrot, Lemon, Ginger</p><p class="muted">Rich in Vitamins A &amp; C, boosts immunity and energy, supports skin &amp; eye health, anti-inflammatory properties, and digestive health.</p></div></div>
       <div class="card reveal"><div class="card-body"><span class="card-tag">Carrot Glow</span><h3>The Brain &amp; Beauty Blend</h3><p class="ingredients">Pineapple, Orange, Carrot, Turmeric, Ginger</p><p class="muted">Supports brain and eye health, boosts immunity and energy, anti-inflammatory properties, improves circulation, and promotes glowing skin.</p></div></div>
-      <div class="card reveal"><div class="card-body"><span class="card-tag">Queen&rsquo;s Power</span><h3>The Empowerment Elixir</h3><p class="ingredients">Beetroot, Watermelon, Ginger, Pineapple, Lemon, Maca Root Powder</p><p class="muted">Supports hormonal balance, boosts stamina and endurance, improves fertility &amp; reproductive health, enhances skin health and glow, promotes iron &amp; blood health, reduces inflammation and stress.</p></div></div>
+      <div class="card reveal"><div class="card-body"><span class="card-tag">King&rsquo;s/Queen&rsquo;s Power</span><h3>The Empowerment Elixir</h3><p class="ingredients">Beetroot, Watermelon, Ginger, Pineapple, Lemon, Maca Root Powder</p><p class="muted">Supports hormonal balance, boosts stamina and endurance, improves fertility &amp; reproductive health, enhances skin health and glow, promotes iron &amp; blood health, reduces inflammation and stress.</p></div></div>
       <div class="card reveal"><div class="card-body"><span class="card-tag">Beet &amp; Bless</span><h3>The Circulation Champion</h3><p class="ingredients">Beets, Apple, Ginger, Carrot, Hint of Lemon</p><p class="muted">Great for blood circulation, digestion support, liver health, and endurance.</p></div></div>
       <div class="card reveal"><div class="card-body"><span class="card-tag">Island Glow</span><h3>The Hydration Hero</h3><p class="ingredients">Watermelon, Cucumber, Pineapple, Lime, Ginger</p><p class="muted">Hydration support, skin glow &amp; collagen boost, digestion aid, anti-inflammatory properties, immunity boost, and refreshing energy.</p></div></div>
     </div>
@@ -608,7 +608,7 @@ benefits_body = f'''
 
 page("benefits.html",
      "Health Benefits of Cold-Pressed Juice | Soul Fuel Juice",
-     "Learn why cold-pressed juice retains more nutrients, and what every Soul Fuel Juice flavor does for your body — from Healing Greens to Queen's Power.",
+     "Learn why cold-pressed juice retains more nutrients, and what every Soul Fuel Juice flavor does for your body — from Healing Greens to King's/Queen's Power.",
      benefits_body)
 
 # ============================== ABOUT ==============================
@@ -722,7 +722,7 @@ testimonials = [
     ("Danielle M.", "Hagerstown, MD", "The Healing Greens juice has become part of my morning routine. I feel more energized and the scripture on every bottle blesses me every time."),
     ("Marcus T.", "Frederick, MD", "I did the 3-Day Soul Slim Reset and felt lighter, clearer, and more disciplined. The devotional made it so much more than a detox."),
     ("Alicia R.", "Baltimore, MD", "Fresh, delicious, and made with so much love. The Fiery Ginger shot is my go-to before every workout."),
-    ("Tanya W.", "Gaithersburg, MD", "Queen's Power is everything. You can taste how fresh it is, and I love supporting a faith-led small business."),
+    ("Tanya W.", "Gaithersburg, MD", "King's/Queen's Power is everything. You can taste how fresh it is, and I love supporting a faith-led small business."),
     ("James K.", "Washington, DC", "Ordered the 7-Day Detox package for my wife and me. Great communication, fresh juice, and we both felt amazing by day four."),
     ("Renee P.", "Hagerstown, MD", "Beet & Bless got me through marathon training. The name says it all — I truly feel blessed and fueled."),
 ]

@@ -20,13 +20,6 @@ const PRODUCTS = [
     sizes: JUICE_SIZES,
   },
   {
-    id: "golden-glow", type: "juice", name: "Golden Glow",
-    img: "/assets/img/golden-glow.jpg?v=2",
-    ingredients: "Mango, Pineapple, Carrot, Lemon, Ginger",
-    benefits: ["Vitamins A & C", "Energy", "Skin & Eye Health", "Digestive Health"],
-    sizes: JUICE_SIZES,
-  },
-  {
     id: "carrot-glow", type: "juice", name: "Carrot Glow",
     img: "/assets/img/carrot-glow.jpg?v=2",
     ingredients: "Pineapple, Orange, Carrot, Turmeric, Ginger",
@@ -34,17 +27,24 @@ const PRODUCTS = [
     sizes: JUICE_SIZES,
   },
   {
-    id: "queens-power", type: "juice", name: "Queen's Power",
-    img: "/assets/img/queens-power.jpg?v=2",
-    ingredients: "Beetroot, Watermelon, Ginger, Pineapple, Lemon, Maca Root Powder",
-    benefits: ["Hormonal Balance", "Stamina", "Iron & Blood Health", "Skin Glow"],
-    sizes: JUICE_SIZES,
-  },
-  {
     id: "beet-bless", type: "juice", name: "Beet & Bless",
     img: "/assets/img/beet-bless.jpg?v=2",
     ingredients: "Beets, Apple, Ginger, Carrot, Hint of Lemon",
     benefits: ["Circulation", "Digestion", "Liver Health", "Endurance"],
+    sizes: JUICE_SIZES,
+  },
+  {
+    id: "golden-glow", type: "juice", name: "Golden Glow",
+    img: "/assets/img/golden-glow.jpg?v=2",
+    ingredients: "Mango, Pineapple, Carrot, Lemon, Ginger",
+    benefits: ["Vitamins A & C", "Energy", "Skin & Eye Health", "Digestive Health"],
+    sizes: JUICE_SIZES,
+  },
+  {
+    id: "queens-power", type: "juice", name: "King's/Queen's Power",
+    img: "/assets/img/queens-power.jpg?v=2",
+    ingredients: "Beetroot, Watermelon, Ginger, Pineapple, Lemon, Maca Root Powder",
+    benefits: ["Hormonal Balance", "Stamina", "Iron & Blood Health", "Skin Glow"],
     sizes: JUICE_SIZES,
   },
   {
