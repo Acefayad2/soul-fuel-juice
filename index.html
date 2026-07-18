@@ -36,8 +36,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   var v = document.querySelector(".hero video");
   if (!v) return;
-  v.muted = true; v.defaultMuted = true; v.loop = true;
-  v.setAttribute("muted", ""); v.removeAttribute("controls");
+  v.muted = true; v.defaultMuted = true; v.loop = true; v.autoplay = true;
+  v.controls = false; v.disablePictureInPicture = true;
+  v.setAttribute("autoplay", "");
+  v.setAttribute("muted", "");
+  v.setAttribute("loop", "");
+  v.setAttribute("playsinline", "");
+  v.setAttribute("webkit-playsinline", "");
+  v.setAttribute("preload", "auto");
+  v.setAttribute("disablepictureinpicture", "");
+  v.setAttribute("controlslist", "nodownload nofullscreen noplaybackrate");
+  v.setAttribute("disableremoteplayback", "");
+  v.removeAttribute("controls");
   var keepPlaying = function () {
     var p = v.play();
     if (p && p.catch) p.catch(function () {});
@@ -79,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </header>
 <main id="main">
 <section class="hero">
-  <video autoplay muted loop playsinline poster="assets/img/hero-poster.jpg?v=2" aria-hidden="true">
+  <video autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture controlslist="nodownload nofullscreen noplaybackrate" disableremoteplayback aria-hidden="true" tabindex="-1">
     <source src="assets/video/hero.mp4" type="video/mp4">
   </video>
   <div class="container">
