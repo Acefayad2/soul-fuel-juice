@@ -47,9 +47,54 @@
   /* ---------- Cart state ---------- */
   const CART_KEY = "sfj-cart";
   const money = (n) => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
-  const getCart = () => { try { return JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch { return []; } };
-  const saveCart = (c) => { localStorage.setItem(CART_KEY, JSON.stringify(c)); renderCartCount(); renderCartDrawer(); };
   const findProduct = (id) => (typeof PRODUCTS !== "undefined" ? PRODUCTS.find((p) => p.id === id) : null);
+
+  function normalizeCart(cart) {
+    if (!Array.isArray(cart)) return [];
+    const merged = [];
+    const byProductSize = new Map();
+    cart.forEach((raw) => {
+      const product = findProduct(raw && raw.id);
+      if (!product) return;
+      const size = product.sizes.find((s) => s.label === raw.size) || product.sizes[0];
+      const qty = Math.max(1, parseInt(raw.qty, 10) || 0);
+      const key = product.id + "::" + size.label;
+      const existing = byProductSize.get(key);
+      if (existing) {
+        existing.qty += qty;
+      } else {
+        const item = {
+          id: product.id,
+          name: product.name,
+          size: size.label,
+          price: size.price,
+          img: product.img,
+          qty,
+        };
+        byProductSize.set(key, item);
+        merged.push(item);
+      }
+    });
+    return merged;
+  }
+
+  const getCart = () => {
+    try {
+      const raw = JSON.parse(localStorage.getItem(CART_KEY)) || [];
+      const cart = normalizeCart(raw);
+      if (JSON.stringify(cart) !== JSON.stringify(raw)) {
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
+      }
+      return cart;
+    } catch {
+      return [];
+    }
+  };
+  const saveCart = (c) => {
+    localStorage.setItem(CART_KEY, JSON.stringify(normalizeCart(c)));
+    renderCartCount();
+    renderCartDrawer();
+  };
 
   function addToCart(id, sizeLabel) {
     const product = findProduct(id);
@@ -172,6 +217,15 @@
   });
 
   /* ---------- Product grid rendering ---------- */
+  function uniqueProducts(items) {
+    const seen = new Set();
+    return items.filter((p) => {
+      if (!p || seen.has(p.id)) return false;
+      seen.add(p.id);
+      return true;
+    });
+  }
+
   function productCard(p) {
     const sizeOptions = p.sizes.map((s) => `<option value="${s.label}">${s.label}</option>`).join("");
     const typeLabel = p.type === "juice" ? "Cold-Pressed Juice" : p.type === "shot" ? "Wellness Shot" : "Bundle & Cleanse";
@@ -197,7 +251,8 @@
     const types = grid.dataset.productGrid.split(",");
     const ids = grid.dataset.products ? grid.dataset.products.split(",") : null;
     let items = PRODUCTS.filter((p) => types.includes("all") || types.includes(p.type));
-    if (ids) items = ids.map((id) => findProduct(id)).filter(Boolean);
+    if (ids) items = ids.map((id) => findProduct(id));
+    items = uniqueProducts(items);
     grid.innerHTML = items.map(productCard).join("");
     grid.querySelectorAll(".reveal").forEach((el) => el.classList.add("visible"));
   });
