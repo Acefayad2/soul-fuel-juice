@@ -492,7 +492,7 @@ cleanse_body = f'''
         <span>Reduce bloating</span><span>Support healthy weight loss</span><span>Boost metabolism</span><span>Improve digestion</span><span>Increase natural energy</span>
       </div>
     </div>
-    <div class="split-media reveal"><img src="assets/img/detox-lineup.png?v=2" alt="Soul Slim detox cleanse bottle lineup" loading="lazy" width="1254" height="1254"></div>
+    <div class="split-media reveal"><img src="assets/img/soul-slim-line.jpg?v=3" alt="Soul Slim Line bottles: Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice" loading="lazy" width="800" height="680"></div>
   </div>
 </section>
 
@@ -804,8 +804,8 @@ posts = [
         "title": "How to Prepare for Your First Juice Cleanse (Body & Soul)",
         "desc": "A practical, grace-filled guide to getting ready for a 3-day juice cleanse — what to eat before, what to expect, and how to finish strong.",
         "date": "July 2026", "tag": "Cleanse",
-        "img": "../assets/img/detox-lineup.jpg",
-        "alt": "Soul Slim detox cleanse bottle lineup",
+        "img": "../assets/img/soul-slim-line.jpg?v=3",
+        "alt": "Soul Slim Line bottles: Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice",
         "body": '''
 <p>A cleanse works best when you ease into it. If you&rsquo;ve booked a 3-Day Soul Slim Reset (or you&rsquo;re thinking about it), here&rsquo;s how to set yourself up for success &mdash; physically and spiritually.</p>
 <h2>Three days before: lighten the load</h2>

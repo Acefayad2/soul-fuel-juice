@@ -132,14 +132,14 @@ const PRODUCTS = [
   },
   {
     id: "soul-slim-3", type: "bundle", name: "3-Day Soul Slim Line Reset",
-    img: "/assets/img/detox-lineup.jpg?v=2",
+    img: "/assets/img/soul-slim-line.jpg?v=3",
     ingredients: "Soul Slim Line: Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, Green Fat Flush Juice",
     benefits: ["Most Popular", "Flat Belly Support", "Weight Support"],
     sizes: [{ label: "3-Day Reset", price: 49 }],
   },
   {
     id: "soul-slim-7", type: "bundle", name: "7-Day Soul Slim Line Transformation",
-    img: "/assets/img/detox-lineup.jpg?v=2",
+    img: "/assets/img/soul-slim-line.jpg?v=3",
     ingredients: "Soul Slim Line: Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, Green Fat Flush Juice",
     benefits: ["Premium Reset", "14 Juices", "Full Transformation"],
     sizes: [{ label: "7-Day Reset", price: 99 }],
