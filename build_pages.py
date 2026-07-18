@@ -281,10 +281,11 @@ index_body = f'''
     <div class="price-cards">
       <div class="price-card featured reveal">
         <span class="badge">Most Popular</span>
-        <h3>3-Day Soul Slim Reset</h3>
+        <h3>3-Day Soul Slim Line Reset</h3>
         <div class="amount">$49</div>
         <ul class="check-list">
-          <li>6 fresh detox juices (2 per day)</li>
+          <li>6 fresh Soul Slim Line juices (2 per day)</li>
+          <li>Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>Soul Slim Reset Guide &amp; simple meal guide</li>
           <li>Soul Slim Discipline Tracker</li>
           <li>7-Day Faith &amp; Fit Reset Guide</li>
@@ -292,10 +293,11 @@ index_body = f'''
         <a class="btn btn--forest" href="cleanse.html">Start Your Reset</a>
       </div>
       <div class="price-card reveal">
-        <h3>7-Day Soul Slim Transformation</h3>
+        <h3>7-Day Soul Slim Line Transformation</h3>
         <div class="amount">$99</div>
         <ul class="check-list">
-          <li>14 fresh detox juices</li>
+          <li>14 fresh Soul Slim Line juices</li>
+          <li>Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>Reset Guide &amp; Discipline Tracker</li>
           <li>Daily faith-centered encouragement</li>
           <li>The full-body reset experience</li>
@@ -433,10 +435,11 @@ cleanse_body = f'''
     <div class="price-cards">
       <div class="price-card featured reveal" data-product="soul-slim-3">
         <span class="badge">Most Popular</span>
-        <h3>3-Day Soul Slim Reset</h3>
+        <h3>3-Day Soul Slim Line Reset</h3>
         <div class="amount">$49</div>
         <ul class="check-list">
-          <li>6 fresh detox juices (2 juices per day)</li>
+          <li>6 fresh Soul Slim Line juices (2 juices per day)</li>
+          <li>Includes Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>7-Day Faith &amp; Fit Reset Guide</li>
           <li>Soul Slim Discipline Tracker</li>
           <li>Simple Meal Guide</li>
@@ -444,10 +447,11 @@ cleanse_body = f'''
         <button type="button" class="btn btn--forest" data-add="soul-slim-3">Add to Cart &mdash; $49</button>
       </div>
       <div class="price-card reveal" data-product="soul-slim-7">
-        <h3>7-Day Soul Slim Transformation</h3>
+        <h3>7-Day Soul Slim Line Transformation</h3>
         <div class="amount">$99</div>
         <ul class="check-list">
-          <li>14 fresh detox juices</li>
+          <li>14 fresh Soul Slim Line juices</li>
+          <li>Includes Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>Reset Guide &amp; Discipline Tracker</li>
           <li>Daily scripture &amp; encouragement</li>
           <li>The complete transformation experience</li>
@@ -478,10 +482,10 @@ cleanse_body = f'''
       <span class="eyebrow">Soul Slim flavors</span>
       <h2>What&rsquo;s in the Bottles</h2>
       <ul class="check-list">
-        <li><strong>Holy Hydration Detox</strong> &mdash; Cucumber, Lemon, Fresh Ginger, Mint Leaves, a pinch of Cayenne</li>
-        <li><strong>Belly Burner Pineapple Cleanse</strong> &mdash; Pineapple, Cucumber, Ginger, Lime, Coconut Water</li>
-        <li><strong>Apple Cider Glow Drink</strong> &mdash; Apple Cider Vinegar with the Mother, Lemon, Cinnamon, Raw Honey</li>
-        <li><strong>Green Fat Flush Juice</strong> &mdash; Spinach, Green Apple, Cucumber, Lemon, Ginger</li>
+        <li><strong>Holy Hydration Detox</strong> &mdash; Cucumber, Lemon, Ginger, Mint</li>
+        <li><strong>Belly Burner Pineapple Cleanse</strong> &mdash; Pineapple, Cucumber, Ginger, Lime</li>
+        <li><strong>Apple Cider Glow Drink</strong> &mdash; Raw Honey, Lemon, Cinnamon, Warm Water</li>
+        <li><strong>Green Fat Flush Juice</strong> &mdash; Spinach, Green Apple, Cucumber, Ginger</li>
       </ul>
       <h3 style="margin-top:26px">Benefits you can feel</h3>
       <div class="benefit-chips">
