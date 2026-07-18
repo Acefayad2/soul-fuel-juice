@@ -111,26 +111,6 @@ const PRODUCTS = [
     ],
   },
   {
-    id: "detox-3day", type: "bundle", name: "3-Day Detox Challenge",
-    img: "/assets/img/lineup.jpg?v=2",
-    ingredients: "9 fresh juices + downloadable devotional PDF",
-    benefits: ["9 Juices", "Devotional PDF", "Reset & Refresh"],
-    sizes: [
-      { label: "9 × 8 oz", price: 81 },
-      { label: "9 × 12 oz", price: 99 },
-    ],
-  },
-  {
-    id: "detox-7day", type: "bundle", name: "7-Day Detox + Devotional",
-    img: "/assets/img/faith-fit-reset.jpg?v=2",
-    ingredients: "21 juices + wellness shots + 7-Day Faith & Fit Devotional",
-    benefits: ["21 Juices", "Wellness Shots", "7-Day Devotional"],
-    sizes: [
-      { label: "21 × 8 oz", price: 205 },
-      { label: "21 × 12 oz", price: 245 },
-    ],
-  },
-  {
     id: "soul-slim-3", type: "bundle", name: "3-Day Soul Slim Line Reset",
     img: "/assets/img/soul-slim-line.jpg?v=3",
     ingredients: "Soul Slim Line: Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, Green Fat Flush Juice",
