@@ -366,12 +366,24 @@ document.addEventListener("DOMContentLoaded", function () {
   v.setAttribute("controlslist", "nodownload nofullscreen noplaybackrate");
   v.setAttribute("disableremoteplayback", "");
   v.removeAttribute("controls");
+  var showVideo = function () {
+    if (!v.paused && v.readyState >= 2) v.classList.add("is-playing");
+  };
   var keepPlaying = function () {
+    v.controls = false;
+    v.removeAttribute("controls");
     var p = v.play();
-    if (p && p.catch) p.catch(function () {});
+    if (p && p.then) p.then(showVideo).catch(function () {
+      v.classList.remove("is-playing");
+    });
   };
   keepPlaying();
-  v.addEventListener("pause", keepPlaying);
+  v.addEventListener("playing", showVideo);
+  v.addEventListener("timeupdate", showVideo);
+  v.addEventListener("pause", function () {
+    v.classList.remove("is-playing");
+    keepPlaying();
+  });
   v.addEventListener("ended", keepPlaying);
   document.addEventListener("visibilitychange", function () {
     if (!document.hidden) keepPlaying();
