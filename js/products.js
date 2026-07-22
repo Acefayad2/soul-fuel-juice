@@ -121,10 +121,10 @@ const PRODUCTS = [
     ],
   },
   {
-    id: "detox-7day", type: "bundle", name: "7-Day Detox + Devotional",
-    img: "/assets/img/faith-fit-reset.jpg?v=2",
-    ingredients: "21 juices + wellness shots + 7-Day Faith & Fit Devotional",
-    benefits: ["21 Juices", "Wellness Shots", "7-Day Devotional"],
+    id: "detox-7day", type: "bundle", name: "7-Day Detox",
+    img: "/assets/img/detox-lineup.jpg",
+    ingredients: "21 regular juices + wellness shots",
+    benefits: ["21 Regular Juices", "Wellness Shots", "7-Day Reset"],
     sizes: [
       { label: "21 × 8 oz", price: 205 },
       { label: "21 × 12 oz", price: 245 },
