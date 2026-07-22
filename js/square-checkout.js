@@ -231,12 +231,20 @@
     document.querySelectorAll(".cart-count").forEach(function (el) { el.textContent = "0"; el.style.display = "none"; });
     var modalInner = modal.querySelector(".modal");
     if (modalInner) {
+      var nextStep = data.nextUrl
+        ? '<p>You&rsquo;ll be sent to Payhip next to purchase the 7-Day Faith &amp; Fit Reset devotional.</p>' +
+          '<p><a class="btn btn--gold" href="' + data.nextUrl + '">Continue to Devotional</a></p>'
+        : "";
       modalInner.innerHTML =
         '<button type="button" class="modal-close" aria-label="Close">&times;</button>' +
         '<h2>Thank you &amp; God bless! &#10084;</h2>' +
         '<p>Your payment of <strong>' + money(Number(data.amount)) + '</strong> went through. ' +
         "We&rsquo;ll confirm your delivery, pickup, or shipping details by text or email shortly.</p>" +
+        nextStep +
         '<p class="muted" style="font-size:.9rem">Questions? Call or text 301-892-6707.</p>';
+    }
+    if (data.nextUrl) {
+      window.setTimeout(function () { window.location.href = data.nextUrl; }, 1800);
     }
     return true;
   }

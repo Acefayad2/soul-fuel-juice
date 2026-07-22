@@ -39,6 +39,7 @@ const PRICES = {
 const SHIPPING_FLAT = 18;   // $18 flat-rate shipping when the order is shipped
 const DELIVERY_FEE = 10;    // $10 local delivery fee...
 const DELIVERY_FREE_MIN = 50; // ...waived on orders of $50+ (items subtotal)
+const SOUL_SLIM_DEVOTIONAL_URL = "https://payhip.com/b/FTiIB";
 
 function json(statusCode, obj) {
   return {
@@ -78,6 +79,7 @@ exports.handler = async (event) => {
 
   // Recompute the total from the server-side price map.
   let total = 0;
+  let includesSoulSlimTransformation = false;
   const lineSummary = [];
   for (const item of items) {
     const priced = PRICES[item.id] && PRICES[item.id][item.size];
@@ -85,6 +87,7 @@ exports.handler = async (event) => {
     if (priced == null) {
       return json(400, { error: `Unknown item in cart: ${item.id} (${item.size}).` });
     }
+    if (item.id === "soul-slim-7") includesSoulSlimTransformation = true;
     total += priced * qty;
     lineSummary.push(`${qty}x ${item.id} (${item.size})`);
   }
@@ -144,6 +147,7 @@ exports.handler = async (event) => {
       ok: true,
       amount: (amountCents / 100).toFixed(2),
       paymentId: payload.payment && payload.payment.id,
+      nextUrl: includesSoulSlimTransformation ? SOUL_SLIM_DEVOTIONAL_URL : "",
     });
   } catch (err) {
     console.error("Square payment failed:", err);
