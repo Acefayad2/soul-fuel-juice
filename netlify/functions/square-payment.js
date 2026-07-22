@@ -34,7 +34,6 @@ const PRICES = {
   "detox-7day": { "21 × 8 oz": 205, "21 × 12 oz": 245 },
   "soul-slim-3": { "3-Day Reset": 49 },
   "soul-slim-7": { "7-Day Reset": 99 },
-  "faith-fit-reset": { "eBook + Tracker": 10 },
 };
 
 const SHIPPING_FLAT = 18;   // $18 flat-rate shipping when the order is shipped

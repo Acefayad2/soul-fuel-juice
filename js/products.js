@@ -140,17 +140,8 @@ const PRODUCTS = [
   {
     id: "soul-slim-7", type: "bundle", name: "7-Day Soul Slim Line Transformation",
     img: "/assets/img/soul-slim-line.jpg?v=3",
-    ingredients: "Soul Slim Line: Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, Green Fat Flush Juice",
-    benefits: ["Premium Reset", "14 Juices", "Full Transformation"],
+    ingredients: "14 Soul Slim Line juices + The 7-Day Faith & Fit Reset eBook + printable Discipline Tracker",
+    benefits: ["Premium Reset", "14 Juices", "Faith & Fit Reset Included"],
     sizes: [{ label: "7-Day Reset", price: 99 }],
-  },
-
-  /* ---- Digital downloads ---- */
-  {
-    id: "faith-fit-reset", type: "digital", name: "The 7-Day Faith & Fit Reset",
-    img: "/assets/img/faith-fit-reset.jpg?v=2",
-    ingredients: "Instant digital download — full eBook + printable 7-Day Discipline Tracker",
-    benefits: ["eBook", "Discipline Tracker", "Instant Download"],
-    sizes: [{ label: "eBook + Tracker", price: 10 }],
   },
 ];

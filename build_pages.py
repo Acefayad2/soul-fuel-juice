@@ -288,7 +288,6 @@ index_body = f'''
           <li>Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>Soul Slim Reset Guide &amp; simple meal guide</li>
           <li>Soul Slim Discipline Tracker</li>
-          <li>7-Day Faith &amp; Fit Reset Guide</li>
         </ul>
         <a class="btn btn--forest" href="cleanse.html">Start Your Reset</a>
       </div>
@@ -298,7 +297,8 @@ index_body = f'''
         <ul class="check-list">
           <li>14 fresh Soul Slim Line juices</li>
           <li>Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
-          <li>Reset Guide &amp; Discipline Tracker</li>
+          <li>The 7-Day Faith &amp; Fit Reset eBook</li>
+          <li>Printable Discipline Tracker</li>
           <li>Daily faith-centered encouragement</li>
           <li>The full-body reset experience</li>
         </ul>
@@ -450,7 +450,6 @@ cleanse_body = f'''
         <ul class="check-list">
           <li>6 fresh Soul Slim Line juices (2 juices per day)</li>
           <li>Includes Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
-          <li>7-Day Faith &amp; Fit Reset Guide</li>
           <li>Soul Slim Discipline Tracker</li>
           <li>Simple Meal Guide</li>
         </ul>
@@ -462,7 +461,8 @@ cleanse_body = f'''
         <ul class="check-list">
           <li>14 fresh Soul Slim Line juices</li>
           <li>Includes Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
-          <li>Reset Guide &amp; Discipline Tracker</li>
+          <li>The 7-Day Faith &amp; Fit Reset eBook</li>
+          <li>Printable Discipline Tracker</li>
           <li>Daily scripture &amp; encouragement</li>
           <li>The complete transformation experience</li>
         </ul>
@@ -524,14 +524,14 @@ cleanse_body = f'''
         <img src="assets/img/faith-fit-reset.jpg?v=2" alt="The 7-Day Faith &amp; Fit Reset devotional by Josephine Sanso" loading="lazy" width="800" height="680">
       </a>
       <div class="reveal">
-        <span class="eyebrow">Instant digital download</span>
+        <span class="eyebrow">Included with the 7-day transformation</span>
         <h2>The 7-Day Faith &amp; Fit Reset</h2>
-        <p class="muted">You don&rsquo;t need another diet &mdash; you need a reset. A balanced, faith-centered guide to reduce bloating, control cravings, and rebuild discipline in just 7 days. <em>&ldquo;True transformation starts within.&rdquo;</em></p>
+        <p class="muted">The full eBook and printable Discipline Tracker are included with the 7-Day Soul Slim Line Transformation, giving you juice, structure, scripture, and accountability in one complete reset.</p>
         <a class="btn btn--gold" href="devotional.html">
-          Learn More
+          See What&rsquo;s Included
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <p class="muted" style="font-size:.85rem;margin-top:14px">Includes the full eBook &amp; a printable 7-Day Discipline Tracker. Juice Cleanse Guide, Wellness Guide &amp; Nutrition Information downloads coming soon.</p>
+        <p class="muted" style="font-size:.85rem;margin-top:14px">No need to buy this separately &mdash; it comes bundled with the 7-day Soul Slim Line plan.</p>
       </div>
     </div>
   </div>
