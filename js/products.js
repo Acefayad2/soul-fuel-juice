@@ -140,8 +140,8 @@ const PRODUCTS = [
   {
     id: "soul-slim-7", type: "bundle", name: "7-Day Soul Slim Line Transformation",
     img: "/assets/img/soul-slim-line.jpg?v=3",
-    ingredients: "14 Soul Slim Line juices + The 7-Day Faith & Fit Reset eBook + printable Discipline Tracker",
-    benefits: ["Premium Reset", "14 Juices", "Faith & Fit Reset Included"],
+    ingredients: "4 Soul Slim Line juices + The 7-Day Faith & Fit Reset eBook + printable Discipline Tracker",
+    benefits: ["Premium Reset", "4 Soul Slim Juices", "Faith & Fit Reset Included"],
     sizes: [{ label: "7-Day Reset", price: 99 }],
   },
 ];

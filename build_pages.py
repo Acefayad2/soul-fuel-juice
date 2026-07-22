@@ -295,7 +295,7 @@ index_body = f'''
         <h3>7-Day Soul Slim Line Transformation</h3>
         <div class="amount">$99</div>
         <ul class="check-list">
-          <li>14 fresh Soul Slim Line juices</li>
+          <li>4 fresh Soul Slim Line juices</li>
           <li>Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>The 7-Day Faith &amp; Fit Reset eBook</li>
           <li>Printable Discipline Tracker</li>
@@ -459,7 +459,7 @@ cleanse_body = f'''
         <h3>7-Day Soul Slim Line Transformation</h3>
         <div class="amount">$99</div>
         <ul class="check-list">
-          <li>14 fresh Soul Slim Line juices</li>
+          <li>4 fresh Soul Slim Line juices</li>
           <li>Includes Holy Hydration Detox, Belly Burner Pineapple Cleanse, Apple Cider Glow Drink, and Green Fat Flush Juice</li>
           <li>The 7-Day Faith &amp; Fit Reset eBook</li>
           <li>Printable Discipline Tracker</li>
