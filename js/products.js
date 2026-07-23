@@ -112,7 +112,7 @@ const PRODUCTS = [
   },
   {
     id: "detox-3day", type: "bundle", name: "3-Day Detox Challenge",
-    img: "/assets/img/detox-3day-regular-juices.jpg?v=5",
+    img: "/assets/img/detox-3day-regular-juices.jpg?v=6",
     ingredients: "9 regular juices from the Soul Fuel lineup: Healing Greens, Carrot Glow, Beet & Bless, Golden Glow, King's/Queen's Power, Island Glow",
     benefits: ["9 Regular Juices", "Choose Your Mix", "Reset & Refresh"],
     sizes: [
